@@ -145,46 +145,6 @@ Run the tests with:
 mvn test
 ```
 
-The project includes:
-- Unit tests for domain logic
-- Integration tests for the complete flow
-- API tests for REST endpoints
-
-## Key Features
-
-### Event Sourcing
-- All state changes are stored as immutable events
-- Aggregates can be reconstructed from their event history
-- Complete audit trail of all changes
-- Temporal queries and debugging capabilities
-
-### CQRS
-- Separate models for commands (writes) and queries (reads)
-- Optimized read models for different query patterns
-- Independent scaling of read and write sides
-- Event-driven synchronization between models
-
-### Domain-Driven Design
-- Rich domain models with business logic
-- Aggregates enforce consistency boundaries
-- Domain events capture business-significant occurrences
-- Clear separation of concerns
-
-## Project Structure
-
-```
-src/main/java/com/example/cqrs/
-├── api/                    # REST controllers and DTOs
-├── command/                # Command side (write model)
-│   └── order/              # Order commands and handlers
-├── domain/                 # Domain layer
-│   └── order/              # Order aggregate and events
-├── infrastructure/         # Infrastructure concerns
-├── query/                  # Query side (read model)
-│   └── order/              # Order projections and queries
-└── CqrsEventSourcingApplication.java
-```
-
 ## License
 
 This project is licensed under the Apache 2.0 License - see the LICENSE file for details.
